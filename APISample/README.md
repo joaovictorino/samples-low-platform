@@ -5,7 +5,7 @@ This sample demonstrates a simple ASP.NET Core Web API that exposes CRUD operati
 ## Project Structure
 
 ```
-CrudSample/
+APISample/
 ├── Contracts/
 │   ├── CreateBookRequest.cs
 │   └── UpdateBookRequest.cs
@@ -27,7 +27,7 @@ CrudSample/
 Make sure you have the .NET 8.0 SDK installed, then run:
 
 ```bash
-cd CrudSample
+cd APISample
 dotnet restore
 dotnet run
 ```
