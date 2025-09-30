@@ -1,0 +1,20 @@
+# Build outputs
+bin/
+obj/
+
+# User-specific files
+.vscode/
+*.user
+*.suo
+
+# Logs and temp
+*.log
+*.tmp
+
+# dotnet tooling
+project.lock.json
+artifacts/
+
+# OS files
+.DS_Store
+Thumbs.db

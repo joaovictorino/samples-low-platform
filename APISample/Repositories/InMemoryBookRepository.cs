@@ -8,14 +8,14 @@ public class InMemoryBookRepository : IBookRepository
     [
         new Book
         {
-            Id = Guid.Parse("11111111-1111-1111-1111-111111111111"),
+            Id = Guid.Parse("874d290d-350b-4a86-9d26-3bccc55b750d"),
             Title = "The Pragmatic Programmer",
             Author = "Andrew Hunt & David Thomas",
             YearPublished = 1999
         },
         new Book
         {
-            Id = Guid.Parse("22222222-2222-2222-2222-222222222222"),
+            Id = Guid.Parse("d654de78-ee0d-4b7a-a7f6-89e09b248138"),
             Title = "Clean Code",
             Author = "Robert C. Martin",
             YearPublished = 2008
