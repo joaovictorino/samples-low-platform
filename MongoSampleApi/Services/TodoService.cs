@@ -24,6 +24,13 @@ public class TodoService
             .ToListAsync(cancellationToken);
     }
 
+    public async Task<IReadOnlyList<TodoItem>> GetCompletedAsync(CancellationToken cancellationToken = default)
+    {
+        return await _collection.Find(x => x.IsCompleted)
+            .SortByDescending(x => x.CreatedAt)
+            .ToListAsync(cancellationToken);
+    }
+
     public async Task<TodoItem?> GetByIdAsync(string id, CancellationToken cancellationToken = default)
     {
         return await _collection.Find(x => x.Id == id)
@@ -35,6 +42,7 @@ public class TodoService
         var todo = new TodoItem
         {
             Title = request.Title.Trim(),
+            Category = request.Category.Trim(),
             IsCompleted = false,
             CreatedAt = DateTime.UtcNow
         };

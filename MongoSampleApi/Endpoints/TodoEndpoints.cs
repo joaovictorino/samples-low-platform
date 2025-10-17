@@ -20,6 +20,13 @@ public static class TodoEndpoints
             return Results.Ok(todos);
         });
 
+        group.MapGet("/completed", async ([FromServices] TodoService service, CancellationToken cancellationToken) =>
+        {
+            var completedTodos = await service.GetCompletedAsync(cancellationToken);
+            return Results.Ok(completedTodos);
+        })
+        .WithName("GetCompletedTodos");
+
         group.MapGet("/{id}", async ([FromServices] TodoService service, string id, CancellationToken cancellationToken) =>
         {
             var todo = await service.GetByIdAsync(id, cancellationToken);
